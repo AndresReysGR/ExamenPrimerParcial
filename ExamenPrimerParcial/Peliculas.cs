@@ -26,7 +26,7 @@ namespace ExamenPrimerParcial
             set
             {
 
-                if (value >= 1800 /*falta 2019*/)
+                if (value >= 1800 )
                 {
                     throw new Exception("No esta dentro de los años 1800 a 2019");
                 }
@@ -81,13 +81,13 @@ namespace ExamenPrimerParcial
             PaisDeOrigen = "Nombre no asignado";
             Sinopsis = "Nombre no asignado";
         }
-        public Peliculas(string titulo )
+        public Peliculas(string titulo, string director, string genero, string paisdeorigen, string sinopsis )
         {
             Titulo = titulo;
-            Director = "Nombre no asignado";
-            Genero = "Nombre no asignado";
-            PaisDeOrigen = "Nombre no asignado";
-            Sinopsis = "Nombre no asignado";
+            Director = director;
+            Genero = genero;
+            PaisDeOrigen = paisdeorigen;
+            Sinopsis = sinopsis;
         }
 
 

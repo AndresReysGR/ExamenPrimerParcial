@@ -25,10 +25,17 @@ namespace ExamenPrimerParcial
             }
             set
             {
+
                 if (value >= 1800 /*falta 2019*/)
                 {
                     throw new Exception("No esta dentro de los años 1800 a 2019");
                 }
+                if(value <= 2019)
+                {
+                    throw new Exception("No esta dentro de los años 1800 a 2019");
+                }
+
+             
             }
         }
         public int DuracionEnMinutos
@@ -40,7 +47,7 @@ namespace ExamenPrimerParcial
             }
             set
             {
-                if (value > 0 /*falta 2019*/)
+                if (value > 0 )
                 {
                     throw new Exception("Los minutos de esta pelicula no son mañor de 0");
                 }
@@ -55,7 +62,11 @@ namespace ExamenPrimerParcial
             }
             set
             {
-                if (value >= 0 /*falta 10*/)
+                if (value >= 0 )
+                {
+                    throw new Exception("El valor del rating no esta entre 0 y 10");
+                }
+                if (value <= 10)
                 {
                     throw new Exception("El valor del rating no esta entre 0 y 10");
                 }
@@ -70,13 +81,13 @@ namespace ExamenPrimerParcial
             PaisDeOrigen = "Nombre no asignado";
             Sinopsis = "Nombre no asignado";
         }
-        public Peliculas(string titulo, string director, string genero, string paisdeorigen, string sinopsis)
+        public Peliculas(string titulo )
         {
             Titulo = titulo;
-            Director = director;
-            Genero = genero;
-            PaisDeOrigen = paisdeorigen;
-            Sinopsis = sinopsis;
+            Director = "Nombre no asignado";
+            Genero = "Nombre no asignado";
+            PaisDeOrigen = "Nombre no asignado";
+            Sinopsis = "Nombre no asignado";
         }
 
 
